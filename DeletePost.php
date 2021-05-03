@@ -3,7 +3,6 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 $mysqli = new mysqli("mysql.eecs.ku.edu", "shayenpatel", "jae3ieW3", "shayenpatel");
 
-/* check connection */
 if ($mysqli->connect_errno)
 {
     printf("Connect failed: %s\n", $mysqli->connect_error);
@@ -17,6 +16,5 @@ foreach($_POST['box'] as $ID)
   echo "Post with post_id " . $ID . " was deleted<br>";
 }
 
-/* close connection */
 $mysqli->close();
 ?>
