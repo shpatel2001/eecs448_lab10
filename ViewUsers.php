@@ -1,7 +1,6 @@
 <?php
 $mysqli = new mysqli("mysql.eecs.ku.edu", "shayenpatel", "jae3ieW3", "shayenpatel");
 
-/* check connection */
 if ($mysqli->connect_errno) 
 {
     printf("Connect failed: %s\n", $mysqli->connect_error);
@@ -18,8 +17,6 @@ $result = $mysqli->query($query);
 printf("image of user and posts on SQL table also attached to the file.");
 
 $result->free();
- /* free result set */
- 
-/* close connection */
+
 $mysqli->close();
 ?> 
