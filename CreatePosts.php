@@ -19,7 +19,6 @@ if ($result = $mysqli->query($query))
     
     while ($row = $result->fetch_assoc())
     {
-      //if user is found, make a post
         if($row["user_id"] == $Username)
         {
           $sql = "INSERT INTO Posts (author_id, content) VALUES ('$Username','$Content')";
